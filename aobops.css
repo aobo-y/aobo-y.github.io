@@ -1,0 +1,256 @@
+body {
+	/*padding-top: 60px;*/
+
+
+	font-family: Papyrus, fantasy;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+		
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+}
+
+hr {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-top: 1px solid #bbbbbb
+}
+
+.resume-item-name {
+	text-align: center;
+}
+
+.resume-description {
+	color: #888888;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.cente#ff3052 {
+    text-align: center;
+}
+
+.left-line-list-item{
+	border-left: solid 1px #929292
+}
+
+.invisible-hr {
+	margin-top: 30px;
+	margin-bottom: 0px;
+	border-top: 0px;
+}
+
+.btn-primary {
+	width: 100%;
+}
+
+.social-icon {
+	color: white;
+	width: 55px;
+	height: 55px;
+	margin: 2px;
+
+	background-color: #444444;
+	border: 0px solid;
+	border-radius: 0%;
+
+	text-align: center;
+	float: left;
+	display: block;	
+
+}
+
+.fa-social-icon {
+	line-height: 55px;
+
+	vertical-align: middle;
+}
+
+
+#brand-fn {
+	color: white;
+	float: left;
+	font-style: italic;	
+}
+
+#brand-gn {
+	color: #ff3052;
+	float: left;
+}
+
+#header{
+	color: white;
+	background: url(./assets/pic/bigpic4.JPG) no-repeat center center;
+	margin-top: 0px;
+	padding-top:280px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	
+	padding-bottom: 180px;
+
+	width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+#nav-btn-list{
+	text-transform: uppercase;
+}
+
+#header h1{
+	font-size: 80px
+}
+
+#header h3{
+	font-size: 30px
+}
+
+
+#me {
+	background: #2c3e50;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: white;
+} 
+
+#work {
+	background: #666666;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: white;
+} 
+
+#contact {
+	background: #272727;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: #bbbbbb;	
+	height: 100%;
+	width: 100%;
+
+}
+
+
+#contact #contact-title{
+	color: #ff3052;
+}
+
+#contact .container-fluid {
+	padding-top: 0px;
+
+	padding-bottom: 1px;
+}
+
+#contact .contact-left {
+	max-width: 850px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+}
+
+#contact-right {
+	padding: 0px;
+	position: relative;
+}
+
+#contact-info {
+
+/*	padding-top: 50px;
+	padding-bottom: 10px;
+*/
+	font-weight: bold;
+}
+
+#contact-info i {
+	color: #ff3052;
+	width: 30px;
+
+}
+
+#map-component {
+	position: absolute;
+	width: 100%;
+	height: 78%;
+	bottom: 0;
+}
+
+#map-bar {
+	width: 100%;
+	height: 5%;;
+}
+
+#map-bar .bar-leftup-corner,
+#map-bar .horizontal-bar,
+#map-bar .bar-rightup-corner {
+	float: left;
+	height: 100%;
+	background-color: #ff3052;
+}
+#map-bar .bar-leftup-corner,
+#map-bar .bar-rightup-corner {
+	width: 5%;
+	
+}
+#map-bar .bar-leftup-corner {
+	border-top-left-radius: 50%;
+}
+#map-bar .bar-rightup-corner {
+	border-top-right-radius: 50%;
+}
+#map-bar .horizontal-bar {
+	width: 90%;
+}
+
+#map-canvas{
+	width: 100%;
+	height: 95%;
+}
+
+#resume {
+	width: 100%;
+	color: #2c3e50;
+
+}
+
+#resume-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: white;
+}
+
+#resume-right-side {
+	background-color: #dddddd;
+}
+
+
+#footer {
+	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: right;
+	color: white;
+}
+
+#footer b {
+	color: #ff372d;
+}
+
+
+
+
+textarea {
+	resize: none;
+}
