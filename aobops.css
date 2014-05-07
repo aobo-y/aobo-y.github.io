@@ -9,6 +9,8 @@ body {
 		
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+
+	font-size: 15px;
 }
 
 hr {
@@ -47,6 +49,30 @@ hr {
 	width: 100%;
 }
 
+.circle-social-icon {
+	color: white;
+	width: 50px;
+	height: 50px;
+	margin: 3px;
+
+	border: 2px solid;
+	border-radius: 50%;
+
+	text-align: center;
+	display:inline-block;
+}
+.circle-social-icon i{
+  position: relative;
+  margin-top: -27.5px;
+  top: 50%;
+  height: 55px;
+}
+.circle-social-icon:hover {
+	background-color:  #ffffff;
+	border-color: #ffffff;
+	color: #2c3e50;
+}
+
 .social-icon {
 	color: white;
 	width: 55px;
@@ -60,7 +86,11 @@ hr {
 	text-align: center;
 	float: left;
 	display: block;	
+}
 
+.social-icon:hover {
+	color: #ffffff;
+	background-color: #428bca;
 }
 
 .fa-social-icon {
@@ -69,9 +99,9 @@ hr {
 	vertical-align: middle;
 }
 
-
+/*Navbar Name begin*/
 #brand-fn {
-	color: white;
+	color: #ffffff;
 	float: left;
 	font-style: italic;	
 }
@@ -81,18 +111,27 @@ hr {
 	float: left;
 }
 
-#header{
-	color: white;
-	background: url(./assets/pic/bigpic4.jpg) no-repeat center center;
-	margin-top: 0px;
-	padding-top:280px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	
-	padding-bottom: 180px;
+.navbar-brand:hover #brand-fn {
+	color: #ff3052;
+}
 
+.navbar-brand:hover #brand-gn {
+	color: #ffffff;
+}
+/*Navbar Name end*/
+
+
+#header{
+	display: block;
+	color: white;
+	background: url(./assets/pic/bigpic4.jpg) no-repeat; 
+	background-position-x: 100%;
+	background-position-y: center;
+	/*padding-top:280px;*/
+
+	background-attachment: relative;
 	width: 100%;
+	height: 100%;
 
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -105,6 +144,11 @@ hr {
     background-size: cover;
 }
 
+#header-content {
+	position: relative;
+    top: 45%;
+	text-align: center;
+}
 
 #nav-btn-list{
 	text-transform: uppercase;
@@ -118,6 +162,9 @@ hr {
 	font-size: 30px
 }
 
+#header-social-bar {
+	
+}
 
 #me {
 	background: #2c3e50;
@@ -135,12 +182,8 @@ hr {
 
 #contact {
 	background: #272727;
-	padding-top: 0px;
-	padding-bottom: 0px;
 	color: #bbbbbb;	
-	height: 100%;
 	width: 100%;
-
 }
 
 
@@ -148,11 +191,6 @@ hr {
 	color: #ff3052;
 }
 
-#contact .container-fluid {
-	padding-top: 0px;
-
-	padding-bottom: 1px;
-}
 
 #contact .contact-left {
 	max-width: 850px;
@@ -231,10 +269,30 @@ hr {
 	background-color: white;
 }
 
-#resume-right-side {
-	background-color: #dddddd;
+#resume-catalog {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*color: #3276b1;	*/
+	position: relative;
 }
-
+#resume-catalog ul{
+	
+}
+#resume-catalog li{
+	list-style-type: none;
+}
+.absolute-top{
+	position: absolute;
+	top: 50px;
+}
+.absolute-bottom{
+	position: absolute;
+	bottom: 175px;
+}
+.fixed {
+	position: fixed;
+	top: 100px;
+}
 
 #footer {
 	background-color: black;
