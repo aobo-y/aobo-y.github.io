@@ -257,12 +257,12 @@ hr {
 	height: 95%;
 }
 
+/*resume begin*/
 #resume {
 	width: 100%;
 	color: #2c3e50;
 
 }
-
 #resume-content {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -276,23 +276,53 @@ hr {
 	position: relative;
 }
 #resume-catalog ul{
-	
-}
-#resume-catalog li{
 	list-style-type: none;
 }
+#resume-catalog ul>li {
+	margin-bottom: 10px;
+}
+.cl-item >a {
+	color: #2c3e50;
+	text-decoration: none;
+}
+.cl-item:hover{
+	color: #ff372d;
+	list-style-type: circle;
+}
+.cl-item:hover >a {
+	color: #ff372d;
+	
+}
+.highlighted {
+	list-style-type: disc;
+	color: #ff372d;
+}
+.highlighted a {
+	color: #ff372d;
+}
+
 .absolute-top{
 	position: absolute;
 	top: 50px;
 }
 .absolute-bottom{
 	position: absolute;
-	bottom: 175px;
+	top: 1260px;
 }
 .fixed {
 	position: fixed;
 	top: 100px;
 }
+
+.skill-tag{
+	display: inline-block;
+	color: white;
+	background-color: #5bc0de;
+	padding: 10px 15px;
+	margin: 3px 3px;
+	border-radius: 4px;
+}
+/*resume end*/
 
 #footer {
 	background-color: black;
