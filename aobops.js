@@ -7,8 +7,16 @@ $(document).ready(function(){
 });
 
 function setHeaderHeight(){
-	var h=$(window).height()-$('#me').outerHeight();
-	$('#header').height(h+'px');
+	var h=$(window).height();
+	if(h>600){
+		h-=$('#me').outerHeight()
+	}
+	$('#header').outerHeight(h);
+
+	var hc=$('#header-content');
+	hc.css({
+		'margin-top':'-'+ hc.height()/2 + 'px'
+	})
 }
 
 function initializeNavbarButton(){
