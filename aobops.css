@@ -13,6 +13,7 @@ body {
 	font-size: 15px;
 }
 
+
 hr {
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -123,6 +124,7 @@ hr {
 
 #header{
 	display: block;
+	position: relative;
 	color: white;
 	background: url(./assets/pic/bigpic4.jpg) no-repeat; 
 	background-position-x: center;
@@ -150,6 +152,32 @@ hr {
 	text-align: center;
 }
 
+#pull-down-button {
+	display: none;
+}
+
+@media only screen and (max-height: 600px) {
+	#pull-down-button {
+		display: block;
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		position: absolute;
+	    bottom: 0;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		background-color: #555555;
+		opacity: 0.55;		
+	}
+	#pull-down-button:hover {
+		opacity: 0.8
+	}
+	#header-content {
+		top: 55%;
+	}
+}
+
 #nav-btn-list{
 	text-transform: uppercase;
 }
@@ -160,6 +188,18 @@ hr {
 
 #header h3{
 	font-size: 30px
+}
+
+@media only screen and (max-width: 767px) {
+
+	#header h1 {
+	  font-size: 60px;
+	}
+
+	#header h2 {
+	  font-size: 18px;
+	}
+
 }
 
 #header-social-bar {
