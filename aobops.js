@@ -51,7 +51,7 @@ function addResumeCatalogClickHandler(){
 
 function addFindMoreBtnHandler(){
 	var b=$('#find-more-button');
-	b.on('mouseover mouseout touchstart touchend', function(){
+	b.on('mouseover mouseout touchstart touchmove', function(){
 		b.toggleClass('hover');
 	})
 	b.click(scrollBtnClickHandler);

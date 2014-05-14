@@ -156,6 +156,11 @@ hr {
 	display: none;
 }
 
+.hover {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
 @media only screen and (max-height: 600px) {
 	#find-more-button {
 		display: block;
