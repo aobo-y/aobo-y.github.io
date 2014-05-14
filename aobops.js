@@ -1,7 +1,17 @@
 var navbarHeight;
 
+var $resumeClUl;
+var $resumeClLi;	
+
+var resumeBegin;
+var resumeEnd;
+var eduBegin;
+var jobBegin;
+var awardBegin;
+var skillBegin;
+
 $(document).ready(function(){
-	navbarHeight=$('#navbar').height();
+	initializeVariables();
 
 	setHeaderHeight();
 	addWindowSizeChangeHandler();
@@ -9,9 +19,18 @@ $(document).ready(function(){
 	addNavbarBtnHandler();
 	addFindMoreBtnHandler();
 	addResumeCatalogClickHandler();
-	initializeResumeScroll();
+
+	initializeResumePartBorderVar();
+	addScrollHandler();
 	initializeGoogleMap();
 });
+
+function initializeVariables(){
+	navbarHeight=$('#navbar').height();
+
+	$resumeClUl=$('#resume-catalog ul');
+	$resumeClLi=$('#resume-catalog li');
+}
 
 function setHeaderHeight(){
 	var h=$(window).height();
@@ -29,7 +48,7 @@ function setHeaderHeight(){
 function animateScrollTo(destination){
 	$('html, body').animate({
 		scrollTop: destination-navbarHeight
-	},300)
+	})
 }
 
 function scrollBtnClickHandler(evt){
@@ -38,7 +57,13 @@ function scrollBtnClickHandler(evt){
 }
 
 function addWindowSizeChangeHandler(){
-	$(window).resize(setHeaderHeight);
+	$(window).resize(function(){
+		setHeaderHeight();
+
+		//since header height changed, the offset.top of resume have been affected
+		initializeResumePartBorderVar();
+		updateResumeCatalog();
+	});
 }
 
 function addNavbarBtnHandler(){
@@ -51,9 +76,6 @@ function addResumeCatalogClickHandler(){
 
 function addFindMoreBtnHandler(){
 	var b=$('#find-more-button');
-	b.on('mouseover mouseout touchstart touchmove', function(){
-		b.toggleClass('hover');
-	})
 	b.click(scrollBtnClickHandler);
 }
 
@@ -99,73 +121,78 @@ function addSocialIconHoverHandler(){
 	});
 }
 
-function initializeResumeScroll(){
-	$('#resume-catalog').height($('#resume-content').height());
-	var resumeBegin=$('#resume').offset().top;
-	var resumeEnd=$('#skill-section').offset().top+40-10;
+function initializeResumePartBorderVar(){	
+	resumeBegin=$('#resume').offset().top;
+	resumeEnd=$('#skill-section').offset().top+40-10;
 
-	var eduBegin=$('#education-section').offset().top-80;
-	var jobBegin=$('#job-section').offset().top-30;
-	var awardBegin=$('#award-section').offset().top-20;
-	var skillBegin=$('#skill-section').offset().top-20;
-	
-	var ul=$('#resume-catalog ul');
-	var lis=$('#resume-catalog li');	
+	eduBegin=$('#education-section').offset().top-80;
+	jobBegin=$('#job-section').offset().top-30;
+	awardBegin=$('#award-section').offset().top-20;
+	skillBegin=$('#skill-section').offset().top-20;
+}
 
-	$(window).scroll(function(e){
-		var p=$(window).scrollTop()+50;
-		if(p>=resumeBegin&&p<=resumeEnd){
-			
-			if(!ul.hasClass('fixed')){
-				ul.removeClass();
-				ul.addClass('fixed');
+function updateResumeCatalog(){
+	var ul=$resumeClUl;
+	var lis=$resumeClLi;
+
+	var p=$(window).scrollTop()+navbarHeight;
+	if(p>=resumeBegin&&p<=resumeEnd){
+		
+		if(!ul.hasClass('fixed')){
+			ul.removeClass();
+			ul.addClass('fixed');
+		}
+	}
+	else if(p<resumeBegin){
+		if(!ul.hasClass('absolute-top')){
+			ul.removeClass();
+			ul.addClass('absolute-top');
+		}			
+	}
+	else{
+		if(!ul.hasClass('absolute-bottom')){
+			ul.removeClass();
+			ul.addClass('absolute-bottom');
+		}			
+	}
+
+	if(p>=eduBegin&&p<=resumeEnd+250){
+		if(p<jobBegin){
+			var cli=$('#cl-item-edu');
+			if(!cli.hasClass('highlighted')){
+				lis.removeClass('highlighted');
+				cli.addClass('highlighted');
 			}
 		}
-		else if(p<resumeBegin){
-			if(!ul.hasClass('absolute-top')){
-				ul.removeClass();
-				ul.addClass('absolute-top');
-			}			
+		else if(p<awardBegin){
+			var cli=$('#cl-item-job');
+			if(!cli.hasClass('highlighted')){
+				lis.removeClass('highlighted');
+				cli.addClass('highlighted');
+			}
+		}
+		else if(p<skillBegin){
+			var cli=$('#cl-item-award');
+			if(!cli.hasClass('highlighted')){
+				lis.removeClass('highlighted');
+				cli.addClass('highlighted');
+			}
 		}
 		else{
-			if(!ul.hasClass('absolute-bottom')){
-				ul.removeClass();
-				ul.addClass('absolute-bottom');
-			}			
-		}
-
-		if(p>=eduBegin&&p<=resumeEnd+250){
-			if(p<jobBegin){
-				var cli=$('#cl-item-edu');
-				if(!cli.hasClass('highlighted')){
-					lis.removeClass('highlighted');
-					cli.addClass('highlighted');
-				}
+			var cli=$('#cl-item-skill');
+			if(!cli.hasClass('highlighted')){
+				lis.removeClass('highlighted');
+				cli.addClass('highlighted');
 			}
-			else if(p<awardBegin){
-				var cli=$('#cl-item-job');
-				if(!cli.hasClass('highlighted')){
-					lis.removeClass('highlighted');
-					cli.addClass('highlighted');
-				}
-			}
-			else if(p<skillBegin){
-				var cli=$('#cl-item-award');
-				if(!cli.hasClass('highlighted')){
-					lis.removeClass('highlighted');
-					cli.addClass('highlighted');
-				}
-			}
-			else{
-				var cli=$('#cl-item-skill');
-				if(!cli.hasClass('highlighted')){
-					lis.removeClass('highlighted');
-					cli.addClass('highlighted');
-				}
-			}			
-		}
+		}			
+	}
+}
 
+function addScrollHandler(){
+	$('#resume-catalog').height($('#resume-content').height());
 
+	$(window).scroll(function(e){
+		updateResumeCatalog();
 	});
 }
 
