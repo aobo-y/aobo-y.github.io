@@ -170,8 +170,8 @@ hr {
 		background-color: #555555;
 		opacity: 0.55;		
 	}
-	#find-more-button:hover,
-	#find-more-button:active{
+
+	#find-more-button.hover{
 		opacity: 0.8
 	}
 	#header-content {

@@ -46,11 +46,15 @@ function addNavbarBtnHandler(){
 }
 
 function addResumeCatalogClickHandler(){
-	$('#find-more-button').click(scrollBtnClickHandler)
+	$('.cl-item a').click(scrollBtnClickHandler)
 }
 
 function addFindMoreBtnHandler(){
-	$('.cl-item a').click(scrollBtnClickHandler)
+	var b=$('#find-more-button');
+	b.on('mouseover mouseout touchstart touchend', function(){
+		b.toggleClass('hover');
+	})
+	b.click(scrollBtnClickHandler);
 }
 
 
