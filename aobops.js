@@ -6,7 +6,8 @@ $(document).ready(function(){
 	setHeaderHeight();
 	addWindowSizeChangeHandler();
 	addSocialIconHoverHandler();
-	addNavbarButtonHandler();
+	addNavbarBtnHandler();
+	addFindMoreBtnHandler();
 	addResumeCatalogClickHandler();
 	initializeResumeScroll();
 	initializeGoogleMap();
@@ -25,29 +26,34 @@ function setHeaderHeight(){
 	})
 }
 
-function addWindowSizeChangeHandler(){
-	$(window).resize(setHeaderHeight);
-}
-
-function addNavbarButtonHandler(){
-	$('#nav-btn-list a, .navbar-brand').click(function(evt){
-		evt.preventDefault();
-		animateScrollTo($(this.getAttribute('href')).offset().top);
-	})	
-}
-
-function addResumeCatalogClickHandler(){
-	$('.cl-item a').click(function(evt){
-		evt.preventDefault();
-		animateScrollTo($(this.getAttribute('href')).offset().top);	
-	})
-}
-
 function animateScrollTo(destination){
 	$('html, body').animate({
 		scrollTop: destination-navbarHeight
 	},300)
 }
+
+function scrollBtnClickHandler(evt){
+	evt.preventDefault();
+	animateScrollTo($(this.getAttribute('href')).offset().top);
+}
+
+function addWindowSizeChangeHandler(){
+	$(window).resize(setHeaderHeight);
+}
+
+function addNavbarBtnHandler(){
+	$('#nav-btn-list a, .navbar-brand').click(scrollBtnClickHandler)	
+}
+
+function addResumeCatalogClickHandler(){
+	$('#find-more-button').click(scrollBtnClickHandler)
+}
+
+function addFindMoreBtnHandler(){
+	$('.cl-item a').click(scrollBtnClickHandler)
+}
+
+
 
 function circleEleResize(ele,size){
 	ele.stop().animate({

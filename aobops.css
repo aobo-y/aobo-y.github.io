@@ -152,12 +152,12 @@ hr {
 	text-align: center;
 }
 
-#pull-down-button {
+#find-more-button {
 	display: none;
 }
 
 @media only screen and (max-height: 600px) {
-	#pull-down-button {
+	#find-more-button {
 		display: block;
 		width: 100%;
 		padding-top: 15px;
@@ -170,7 +170,8 @@ hr {
 		background-color: #555555;
 		opacity: 0.55;		
 	}
-	#pull-down-button:hover {
+	#find-more-button:hover,
+	#find-more-button:active{
 		opacity: 0.8
 	}
 	#header-content {
