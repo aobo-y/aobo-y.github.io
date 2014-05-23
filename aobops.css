@@ -126,7 +126,7 @@ hr {
 	display: block;
 	position: relative;
 	color: white;
-	background: url(./assets/pic/bigpic4.jpg) no-repeat; 
+	background: url(./assets/pic/handle.jpg) no-repeat; 
 	background-position-x: center;
 	background-position-y: center;
 	padding-top:1px;
@@ -216,11 +216,39 @@ hr {
 } 
 
 #work {
-	background: #666666;
+/*	background: #666666;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	color: white;
+	color: white;*/
 } 
+
+#work-banner {
+	text-align: center;
+	font-size: 60px;
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px #777777;
+	margin: 0 0;
+	padding: 85px 0;
+
+	background: url(./assets/pic/aqueduct.JPG) no-repeat; 
+	background-position: center center;
+	background-attachment: fixed;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.work-sample {
+	padding: 75px 0;
+}
 
 #contact {
 	background: #272727;
@@ -308,7 +336,6 @@ hr {
 #resume-content {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background-color: white;
 }
 
 #resume-catalog {
