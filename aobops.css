@@ -231,7 +231,7 @@ hr {
 	margin: 0 0 30px 0;
 	padding: 150px 0;
 
-	background: url(./assets/pic/aqueduct.JPG) no-repeat; 
+	background: url(./assets/pic/aqueduct.jpg) no-repeat; 
 	background-position: center center;
 	background-attachment: fixed;
 
@@ -248,6 +248,15 @@ hr {
 
 .work-sample {
 	padding: 80px 0;
+}
+
+.work-img {
+	transition: all 1s ease-in-out;
+}
+
+.work-img:hover {
+	-webkit-transform: rotate(-7deg);
+	transform: rotate(-7deg);
 }
 
 #contact {
