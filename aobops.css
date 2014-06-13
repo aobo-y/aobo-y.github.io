@@ -150,6 +150,7 @@ hr {
 	position: relative;
     top: 60%;
 	text-align: center;
+	margin-top: -104px;
 }
 
 #find-more-button {
@@ -177,6 +178,7 @@ hr {
 	}
 	#header-content {
 		top: 55%;
+		margin-top: -60px;
 	}
 }
 
@@ -271,12 +273,37 @@ hr {
 }
 
 
-#contact .contact-left {
-	max-width: 850px;
+#contact{
 	padding-top: 50px;
 	padding-bottom: 50px;
-
 }
+
+#contact form .row .form-control-feedback {
+	right: 15px;
+}
+
+#contact form .form-control-feedback{
+	display: none;
+}
+
+#contact .has-error .form-control-feedback,
+#contact .has-error .help-block, 
+#contact .has-error .control-label {
+ 	color: #df2020;
+}
+#contact .has-error .form-control {
+	border-color: #df2020;
+}
+
+#contact .has-success .form-control-feedback,
+#contact .has-success .help-block, 
+#contact .has-success .control-label {
+ 	color: #3FBB41;
+}
+#contact .has-success .form-control {
+	border-color: #3FBB41;
+}
+
 
 #contact-right {
 	padding: 0px;
@@ -299,41 +326,29 @@ hr {
 
 #map-component {
 	position: absolute;
-	width: 100%;
-	height: 78%;
+	width: 95%;
+	right: 0;
 	bottom: 0;
 }
 
-#map-bar {
+#map-top-bar {
 	width: 100%;
-	height: 5%;;
-}
-
-#map-bar .bar-leftup-corner,
-#map-bar .horizontal-bar,
-#map-bar .bar-rightup-corner {
-	float: left;
-	height: 100%;
+	height: 25px;
 	background-color: #ff3052;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
-#map-bar .bar-leftup-corner,
-#map-bar .bar-rightup-corner {
-	width: 5%;
-	
-}
-#map-bar .bar-leftup-corner {
-	border-top-left-radius: 50%;
-}
-#map-bar .bar-rightup-corner {
-	border-top-right-radius: 50%;
-}
-#map-bar .horizontal-bar {
-	width: 90%;
+#map-bottom-bar {
+	width: 100%;
+	height: 25px;
+	background-color: #ff3052;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 #map-canvas{
 	width: 100%;
-	height: 95%;
+	height: 495px;
 }
 
 /*resume begin*/
@@ -348,15 +363,14 @@ hr {
 }
 
 #resume-catalog {
-
-	/*color: #3276b1;	*/
+	padding: 80px 0;
 	position: relative;
 }
 #resume-catalog ul{
 	list-style-type: none;
 }
 #resume-catalog ul>li {
-	margin-bottom: 10px;
+	padding-bottom: 10px;
 }
 .cl-item >a {
 	color: #2c3e50;
@@ -384,7 +398,7 @@ hr {
 }
 .absolute-bottom{
 	position: absolute;
-	top: 1290px;
+	bottom: 200px;
 }
 .fixed {
 	position: fixed;
