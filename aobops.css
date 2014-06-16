@@ -24,8 +24,9 @@ hr {
 	text-align: center;
 }
 
-.resume-description {
-	color: #888888;
+.resume-description,
+.work-description {
+	color: #797979;
 }
 
 .full-width{
@@ -218,10 +219,7 @@ hr {
 } 
 
 #work {
-/*	background: #666666;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	color: white;*/
+	color: #2c3e50;
 } 
 
 #work-banner {
@@ -311,10 +309,6 @@ hr {
 }
 
 #contact-info {
-
-/*	padding-top: 50px;
-	padding-bottom: 10px;
-*/
 	font-weight: bold;
 }
 
@@ -353,7 +347,6 @@ hr {
 
 /*resume begin*/
 #resume {
-	width: 100%;
 	color: #2c3e50;
 
 }

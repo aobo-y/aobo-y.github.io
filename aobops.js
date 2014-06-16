@@ -251,7 +251,6 @@ function initializeGoogleMap() {
 	};
 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-
 	$(window).scroll(function(e){
 
 		var bottomLine=$(window).scrollTop()+$(window).height();
@@ -266,13 +265,11 @@ function initializeGoogleMap() {
 			google.maps.event.addListener(marker, 'mouseover', function(){
 				if (marker.getAnimation() == null) {
 					marker.setAnimation(google.maps.Animation.BOUNCE);
-					setTimeout(function(){marker.setAnimation(null);}, 5500);
+					setTimeout(function(){marker.setAnimation(null);}, 3500);
 				}
 			});
-
 			markerAdded=true;
 		}
-		
 	});
 
   	$('#contact-right').height($('#contact').height());
