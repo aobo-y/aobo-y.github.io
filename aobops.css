@@ -397,7 +397,11 @@ hr {
 	position: fixed;
 	top: 130px;
 }
-
+.main-skill-bar:hover .progress-bar{
+	background-color: #5cb85c;
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+	animation: progress-bar-stripes 2s linear infinite;
+}
 .skill-tag{
 	display: inline-block;
 	color: white;
