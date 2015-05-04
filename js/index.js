@@ -1,3 +1,5 @@
+(function($, google){
+
 var navbarHeight;
 var WEB_SERVICE='http://yangaobo.appspot.com';
 var $resumeClUl;
@@ -277,3 +279,4 @@ function initializeGoogleMap() {
   	$('#contact-right').height($('#contact').height());
 }
 
+})(window.jQuery, window.google);
