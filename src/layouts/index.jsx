@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+// import './carousel.css'
 import './index.css'
-import './carousel.css'
 
 const NavHeader = () => (
   <nav id='navbar' className='navbar navbar-inverse navbar-fixed-top' role='navigation'>
