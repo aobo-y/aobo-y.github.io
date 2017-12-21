@@ -1,32 +1,73 @@
 import React from 'react'
+import Icon from '@fortawesome/react-fontawesome'
+
+import {
+  faFacebookF,
+  faTwitter,
+  faGithub,
+  faLinkedinIn,
+  faGooglePlusG,
+  faStackOverflow,
+  faWeibo,
+  faInstagram
+} from '@fortawesome/fontawesome-free-brands'
+import {
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt
+} from '@fortawesome/fontawesome-free-solid'
 
 const SOCIALS = [
   {
-    facebook: 'https://www.facebook.com/aobo.yang.3',
-    twitter: 'https://twitter.com/Aobo_Y',
-    github: 'https://github.com/yangaobo',
-    linkedin: 'http://www.linkedin.com/pub/aobo-yang/85/122/5a1'
+    facebook: {
+      href: 'https://www.facebook.com/aobo.yang.3',
+      icon: faFacebookF
+    },
+    twitter: {
+      href: 'https://twitter.com/Aobo_Y',
+      icon: faTwitter
+    },
+    github: {
+      href: 'https://github.com/yangaobo',
+      icon: faGithub
+    },
+    linkedin: {
+      href: 'http://www.linkedin.com/pub/aobo-yang/85/122/5a1',
+      icon: faLinkedinIn
+    }
   },
   {
-    'google-plus': 'https://plus.google.com/109879626672663714090/posts?gclid=CjkKEQjwqsCcBRDt7_Gts5a91YYBEiQAm-wYEe9Rs8cK-uTMRo-RSTo-keHvbQ81fGuDpgGImaj_Kcrw_wcB',
-    'stack-overflow': 'http://stackoverflow.com/users/2516428/aobo-yang',
-    weibo: 'http://weibo.com/1978767307/profile?rightmod=1&wvr=5&mod=personinfo',
-    instagram: 'http://instagram.com/yangaobo'
+    'google-plus': {
+      href: 'https://plus.google.com/109879626672663714090/posts?gclid=CjkKEQjwqsCcBRDt7_Gts5a91YYBEiQAm-wYEe9Rs8cK-uTMRo-RSTo-keHvbQ81fGuDpgGImaj_Kcrw_wcB',
+      icon: faGooglePlusG
+    },
+    'stack-overflow': {
+      href: 'http://stackoverflow.com/users/2516428/aobo-yang',
+      icon: faStackOverflow
+    },
+    weibo: {
+      href: 'http://weibo.com/1978767307/profile?rightmod=1&wvr=5&mod=personinfo',
+      icon: faWeibo
+    },
+    instagram: {
+      href: 'http://instagram.com/yangaobo',
+      icon: faInstagram
+    }
   }
 ]
 
 const CONTACT_DETAILS = {
   phone: {
     value: '+852 64282076',
-    icon: 'phone'
+    icon: faPhone
   },
   email: {
     value: 'yangaobo@gmail.com',
-    icon: 'envelope'
+    icon: faEnvelope
   },
   addr: {
     value: 'Hung Hom, Kowloon, Hong Kong',
-    icon: 'map-marker'
+    icon: faMapMarkerAlt
   }
 }
 
@@ -69,7 +110,7 @@ const Contacts = () => {
               {
                 Object.keys(CONTACT_DETAILS).map(key => (
                   <div key={key}>
-                    <i className={`fa fa-${CONTACT_DETAILS[key].icon} fa-2x`} /> {CONTACT_DETAILS[key].value}
+                    <Icon icon={CONTACT_DETAILS[key].icon} size='2x' /> {CONTACT_DETAILS[key].value}
                   </div>
                 ))
               }
@@ -79,11 +120,11 @@ const Contacts = () => {
 
             {
               SOCIALS.map((chunk, index) => (
-                <div>
+                <div key={index}>
                   {
                     Object.keys(chunk).map(key => (
-                      <a className='social-icon' href={chunk[key]}>
-                        <i className={`fa-social-icon fa fa-${key} fa-2x`} />
+                      <a key={key} className='social-icon' href={chunk[key].href}>
+                        <Icon icon={chunk[key].icon} className='fa-social-icon' size='2x' />
                       </a>
                     ))
                   }
