@@ -1,21 +1,23 @@
 import React from 'react'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 const Me = () => {
   return (
-    <div id='me'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-2 col-md-offset-1'>
-            <p className='resume-item-name'>ME</p>
-          </div>
-          <div className='col-md-6'>
-            <p>I am a software engineer of passion and eager. I am interested in all kinds of computing technology and skills.
-              I have already had experience in developing Restful API, web site, mobile apps, and flash. However, my major focus now is tightly tied with Javascript</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <section className='section--blue'>
+      <Grid>
+        <Row>
+          <Col md={2} mdOffset={1} className='text-center'>
+            ME
+          </Col>
+          <Col md={6}>
+            <p>
+              I am a software engineer, who is interested in both computing theoretical knowledge and practical skills.
+              I have already had years experience in software development across web, mobile, and database. My major focus now is tightly tied with Javascript
+            </p>
+          </Col>
+        </Row>
+      </Grid>
+    </section>
   )
 }
 
