@@ -52,10 +52,10 @@ const Hero = () => {
     <Jumbotron className='section--jumbotron'>
       <h1 className='jumbotron__h1'>Aobo Yang</h1>
       <h2>Software Engineer</h2>
-      <div id='header-social-bar' className='hidden-xs'>
+      <div className='hidden-xs'>
         {Object.keys(SOCIALS).map(key => (
-          <a key={key} className='circle-social-icon' href={SOCIALS[key].href}>
-            <Icon icon={SOCIALS[key].icon} size='2x' className='fa-social-icon' />
+          <a key={key} className='circle-icon' href={SOCIALS[key].href} target='_blank'>
+            <Icon icon={SOCIALS[key].icon} />
           </a>
         ))}
       </div>
