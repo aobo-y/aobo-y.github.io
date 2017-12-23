@@ -1,4 +1,5 @@
 import React from 'react'
+import { Jumbotron } from 'react-bootstrap'
 import Icon from '@fortawesome/react-fontawesome'
 import {
   faFacebookF,
@@ -48,20 +49,18 @@ const SOCIALS = {
 
 const Hero = () => {
   return (
-    <div id='header'>
-      <div id='header-content'>
-        <h1>Yang Aobo</h1>
-        <h3>A Programmer</h3>
-        <div id='header-social-bar' className='hidden-xs'>
-          {Object.keys(SOCIALS).map(key => (
-            <a key={key} className='circle-social-icon' href={SOCIALS[key].href}>
-              <Icon icon={SOCIALS[key].icon} size='2x' className='fa-social-icon' />
-            </a>
-          ))}
-        </div>
+    <Jumbotron className='section--jumbotron'>
+      <h1 className='jumbotron__h1'>Aobo Yang</h1>
+      <h2>Software Engineer</h2>
+      <div id='header-social-bar' className='hidden-xs'>
+        {Object.keys(SOCIALS).map(key => (
+          <a key={key} className='circle-social-icon' href={SOCIALS[key].href}>
+            <Icon icon={SOCIALS[key].icon} size='2x' className='fa-social-icon' />
+          </a>
+        ))}
       </div>
       <a id='find-more-button' href='#me'>Find out more</a>
-    </div>
+    </Jumbotron>
   )
 }
 

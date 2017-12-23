@@ -127,35 +127,44 @@ hr {
 /*Navbar Name end*/
 
 
-#header{
-	display: block;
-	position: relative;
-	color: white;
+.section--jumbotron {
 	background: url(./handle.jpg) no-repeat;
 	background-position: center center;
-
-	padding-top:1px;
-
-	background-attachment: relative;
 	width: 100%;
+	background-size: cover;
+	margin-top: -4vh;
+	margin-bottom: 0;
+	height: 86vh;
 	min-height: 450px;
-
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	color: white;
+	text-align: center;
+	padding-top: 42vh;
 }
 
-#header-content {
-	position: relative;
-    top: 60%;
-	text-align: center;
-	margin-top: -104px;
+.jumbotron__h1 {
+	font-size: 76px !important;
+}
+
+.section__me {
+	height: 18vh;
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+	.section--jumbotron {
+		margin-top: -12vh;
+		height: 112vh;
+		padding-top: 54vh;
+	}
+
+	.jumbotron__h1 {
+		font-size: 54px !important;
+	}
+
+	.section__me {
+		height: inherit;
+	}
 }
 
 #find-more-button {
@@ -181,34 +190,10 @@ hr {
 	#find-more-button:active{
 		opacity: 0.8
 	}
-	#header-content {
-		top: 55%;
-		margin-top: -60px;
-	}
 }
 
 #nav-btn-list{
 	text-transform: uppercase;
-}
-
-#header h1{
-	font-size: 80px
-}
-
-#header h3{
-	font-size: 30px
-}
-
-@media only screen and (max-width: 767px) {
-
-	#header h1 {
-	  font-size: 60px;
-	}
-
-	#header h2 {
-	  font-size: 18px;
-	}
-
 }
 
 .section--blue {

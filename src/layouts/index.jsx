@@ -34,9 +34,9 @@ const NavHeader = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title='Yang Aobo'
+      title='Aobo Yang'
       meta={[
-        { name: 'description', content: 'Personal site of Yang Aobo' },
+        { name: 'description', content: 'Personal site of Aobo Yang' },
         { name: 'keywords', content: 'aobo, yang aobo' }
       ]}
     />
@@ -44,7 +44,7 @@ const TemplateWrapper = ({ children }) => (
     {children()}
     <div id='footer'>
       <div className='container'>
-        A Web Site by <b>Yang Aobo</b>
+        A Web Site by <b>Aobo Yang</b>
       </div>
     </div>
   </div>

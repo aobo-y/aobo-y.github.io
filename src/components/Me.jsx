@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-bootstrap'
 
 const Me = () => {
   return (
-    <section className='section--blue'>
+    <section className='section--blue section__me'>
       <Grid>
         <Row>
           <Col md={2} mdOffset={1} className='text-center'>
