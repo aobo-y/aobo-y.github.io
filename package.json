@@ -30,7 +30,8 @@
     "bootstrap": "^3.3.7",
     "gatsby": "^1.9.144",
     "gatsby-link": "^1.6.32",
-    "gatsby-plugin-react-helmet": "^1.0.8"
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "react-bootstrap": "^0.31.5"
   },
   "devDependencies": {
     "eslint": "^4.13.1",

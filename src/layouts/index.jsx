@@ -1,36 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 // import './carousel.css'
 import './index.css'
 
 const NavHeader = () => (
-  <nav id='navbar' className='navbar navbar-inverse navbar-fixed-top' role='navigation'>
-    <div className='container'>
-      <div className='navbar-header'>
-        <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='#aobops-navbar'>
-          <span className='sr-only'>Toggle navigation</span>
-          <span className='icon-bar' />
-          <span className='icon-bar' />
-          <span className='icon-bar' />
-        </button>
-        <a className='navbar-brand' href='#header'>
-          <p id='brand-fn'>Yang&nbsp;<span id='brand-gn'>Aobo</span></p>
+  <Navbar inverse fixedTop collapseOnSelect role='navigation'>
+    <Navbar.Header>
+      <Navbar.Brand>
+        <a href='#header'>
+          <span className='navbar-brand-gn'>Aobo</span>
+          &nbsp;
+          <span className='navbar-brand-fn'>Yang</span>
         </a>
-      </div>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+    </Navbar.Header>
 
-      <div className='collapse navbar-collapse' id='aobops-navbar'>
-        <ul id='nav-btn-list' className='nav navbar-nav navbar-right'>
-          <li><a href='#me'>About</a></li>
-          <li><a href='#resume'>Resume</a></li>
-          <li><a href='#work'>Work</a></li>
-          <li><a href='#contact'>Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <Navbar.Collapse>
+      <Nav pullRight>
+        <NavItem eventKey='1' href='#me'>About</NavItem>
+        <NavItem eventKey='2' href='#resume'>Resume</NavItem>
+        <NavItem eventKey='3' href='#work'>Work</NavItem>
+        <NavItem eventKey='4' href='#contact'>Contact</NavItem>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 )
 
 const TemplateWrapper = ({ children }) => (

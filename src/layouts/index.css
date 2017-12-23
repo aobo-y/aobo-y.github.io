@@ -106,22 +106,22 @@ hr {
 }
 
 /*Navbar Name begin*/
-#brand-fn {
+.navbar-brand-fn {
 	color: #ffffff;
 	float: left;
 	font-style: italic;
 }
 
-#brand-gn {
+.navbar-brand-gn {
 	color: #ff3052;
 	float: left;
 }
 
-.navbar-brand:hover #brand-fn {
+.navbar-brand:hover .navbar-brand-fn {
 	color: #ff3052;
 }
 
-.navbar-brand:hover #brand-gn {
+.navbar-brand:hover .navbar-brand-gn {
 	color: #ffffff;
 }
 /*Navbar Name end*/
