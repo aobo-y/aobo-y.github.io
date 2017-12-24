@@ -38,8 +38,8 @@ const Portfolio = () => {
                 </Col>
                 <Col md={4} mdOffset={1}>
                   {work.name}
-                  {work.desc.split('\n').map(s =>
-                    <p className='work__row__desc text-muted'>{s}</p>
+                  {work.desc.split('\n').map((s, index) =>
+                    <p key={index} className='work__row__desc text-muted'>{s}</p>
                   )}
                 </Col>
               </Row>

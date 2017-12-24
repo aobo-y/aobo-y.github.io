@@ -1,4 +1,5 @@
 import React from 'react'
+import { Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap'
 import Icon from '@fortawesome/react-fontawesome'
 
 import {
@@ -12,6 +13,7 @@ import {
   faInstagram
 } from '@fortawesome/fontawesome-free-brands'
 import {
+  faComment,
   faPhone,
   faEnvelope,
   faMapMarkerAlt
@@ -73,76 +75,70 @@ const CONTACT_DETAILS = {
 
 const Contacts = () => {
   return (
-    <div id='contact'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-lg-5'>
-            <h3 id='contact-title'><i className='fa fa-comment fa-lg' /> Say Hello</h3>
-            <hr className='invisible-hr' />
-            <form role='form'>
-              <div className='row'>
-                <div className='col-md-6 form-group has-feedback'>
-                  <label htmlFor='your-name'>Name</label>
-                  <input type='text' className='form-control' name='name' placeholder='Your Name' />
-                  <span className='glyphicon glyphicon-remove form-control-feedback' />
-                </div>
-                <div className='col-md-6 form-group has-feedback'>
-                  <label htmlFor='your-email'>Email</label>
-                  <input type='email' className='form-control' name='email' placeholder='Your Email' />
-                  <span className='glyphicon glyphicon-remove form-control-feedback' />
-                </div>
-              </div>
-
-              <div className='form-group has-feedback'>
-                <label htmlFor='your-email'>Mesage</label>
-                <textarea type='text' className='form-control' rows='4' name='message' placeholder={'What\'s on your mind?'} />
-                <span className='glyphicon glyphicon-remove form-control-feedback' />
-              </div>
-              <div className='form-group'>
-                <button type='submit' className='btn btn-primary'>Send Message</button>
-              </div>
-
+    <section className='section--gray'>
+      <Grid>
+        <Row>
+          <Col lg={5}>
+            <h3 className='text-primary'>
+              <Icon icon={faComment} /> Say Hello
+            </h3>
+            <form role='form' className='contact__form'>
+              <Row>
+                <Col md={6}>
+                  <FormGroup>
+                    <ControlLabel>Name</ControlLabel>
+                    <FormControl type='text' name='name' placeholder='Your Name' />
+                  </FormGroup>
+                </Col>
+                <Col md={6}>
+                  <FormGroup>
+                    <ControlLabel>Email</ControlLabel>
+                    <FormControl type='email' name='email' placeholder='Your Email' />
+                  </FormGroup>
+                </Col>
+              </Row>
+              <FormGroup>
+                <ControlLabel>Message</ControlLabel>
+                <FormControl componentClass='textarea' name='message' rows='4' placeholder={'What\'s on your mind?'} />
+              </FormGroup>
+              <Button block type='submit' bsStyle='primary'>
+                Send Message
+              </Button>
             </form>
 
-            <hr className='invisible-hr' />
+            {
+              Object.keys(CONTACT_DETAILS).map(key => (
+                <div key={key} className='contact__detail'>
+                  <Icon icon={CONTACT_DETAILS[key].icon} className='contact__detail__icon text-primary' /> {CONTACT_DETAILS[key].value}
+                </div>
+              ))
+            }
 
-            <div id='contact-info'>
+            <div className='contact__social'>
               {
-                Object.keys(CONTACT_DETAILS).map(key => (
-                  <div key={key}>
-                    <Icon icon={CONTACT_DETAILS[key].icon} size='2x' /> {CONTACT_DETAILS[key].value}
+                SOCIALS.map((chunk, index) => (
+                  <div key={index} className='contact__social__row'>
+                    {
+                      Object.keys(chunk).map(key => (
+                        <a key={key} className='contact__social-icon' href={chunk[key].href}>
+                          <Icon fixedWidth icon={chunk[key].icon} />
+                        </a>
+                      ))
+                    }
                   </div>
                 ))
               }
             </div>
+          </Col>
 
-            <hr className='invisible-hr' />
-
-            {
-              SOCIALS.map((chunk, index) => (
-                <div key={index}>
-                  {
-                    Object.keys(chunk).map(key => (
-                      <a key={key} className='social-icon' href={chunk[key].href}>
-                        <Icon icon={chunk[key].icon} className='fa-social-icon' size='2x' />
-                      </a>
-                    ))
-                  }
-                </div>
-              ))
-            }
-          </div>
-
-          <div id='contact-right' className='col-lg-6 col-lg-offset-1 visible-lg visible-md'>
-            <div id='map-component'>
-              <div id='map-top-bar' />
+          <Col lg={6} lgOffset={1} className='visible-lg visible-md'>
+            <div className='contact__map'>
               <div id='map-canvas' />
-              <div id='map-bottom-bar' />
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Row>
+      </Grid>
+    </section>
   )
 }
 
