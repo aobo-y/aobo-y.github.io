@@ -181,7 +181,7 @@ hr {
 	color: #2c3e50;
 }
 
-.work-banner {
+.work__banner {
 	text-align: center;
 	font-weight: bold;
 	padding: 125px 0;
@@ -192,7 +192,7 @@ hr {
   background-size: cover;
 }
 
-.work-banner__title {
+.work__banner__title {
 	display: inline-block;
 	font-size: 48px;
 	margin: 0;
@@ -203,27 +203,31 @@ hr {
 }
 
 @media only screen and (max-width: 767px) {
-	.work-banner {
+	.work__banner {
 		padding: 55px 0;
 	}
 
-	.work-banner__title {
+	.work__banner__title {
 		font-size: 28px;
 		padding: 10px 20px;
 	}
 }
 
-.work-sample {
-	padding: 80px 0;
+.work__row + .work__row {
+	margin-top: 20px;
 }
 
-.work-img {
-	transition: all 1s ease-in-out;
+.work__row__img {
+	transition: all 0.3s ease-in-out;
+	transform: scale(0.9);
 }
 
-.work-img:hover {
-	-webkit-transform: rotate(-7deg);
-	transform: rotate(-7deg);
+.work__row__img:hover {
+	transform: scale(1.05);
+}
+
+.work__row__desc {
+	margin-top: 10px;
 }
 
 #contact {
