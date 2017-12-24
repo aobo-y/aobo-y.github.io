@@ -23,9 +23,9 @@ const WORKS = [
 
 const Portfolio = () => {
   return (
-    <div id='work'>
-      <div id='work-banner'>
-        Work Portfolio
+    <section>
+      <div className='work-banner'>
+        <h3 className='work-banner__title'>Work Portfolio</h3>
       </div>
       <div className='work-sample' style={{backgroundColor: '#ffffff'}}>
         <div className='container'>
@@ -44,7 +44,7 @@ const Portfolio = () => {
           }
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
