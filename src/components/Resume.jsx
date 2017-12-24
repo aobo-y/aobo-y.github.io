@@ -42,7 +42,7 @@ const EXPERIENCES = [
 
 const MAIN_SKILLS = [
   {name: 'Javascript', progress: 80},
-  {name: 'Java', progress: 60},
+  {name: 'Python', progress: 50},
   {name: 'Photoshop', progress: 65}
 ]
 
@@ -50,15 +50,17 @@ const SKILLS = [
   'Node.js',
   'React',
   'Redux',
-  'Python',
+  'Java',
   'C',
+  'Express',
+  'Koa',
   'AngularJS',
   'Electron',
-  'jQuery',
   'Cordova',
-  'Bootstrap',
-  'PHP',
-  'MongoDB'
+  'Docker',
+  'Socket.io',
+  'MongoDB',
+  'D3'
 ]
 
 const ResumeRow = ({ label, title, org, date, desc }) => {
