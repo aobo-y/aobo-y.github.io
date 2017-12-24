@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row, Col, ProgressBar } from 'react-bootstrap'
 
 const EXPERIENCES = [
   {
@@ -139,18 +139,16 @@ const Resume = () => {
           </Col>
           <Col md={7}>
             {MAIN_SKILLS.map((skill, index) => (
-              <div key={index} className='main-skill-bar'>
-                <p>{skill.name}</p>
-                <div className='progress progress-striped'>
-                  <div className='progress-bar progress-bar-info' role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100' style={{width: `${skill.progress}%`}}>
-                    <span className='sr-only'>{skill.progress}% Complete</span>
-                  </div>
-                </div>
+              <div key={index} className='resume__progress-bar'>
+                {skill.name}
+                <ProgressBar striped now={skill.progress} />
               </div>
             ))}
           </Col>
           <Col md={7} mdOffset={3}>
-            {SKILLS.map((skill, index) => <p key={index} className='skill-tag'>{skill}</p>)}
+            {SKILLS.map((skill, index) =>
+              <div key={index} className='resume__skill-tag'>{skill}</div>)
+            }
           </Col>
         </Row>
       </Grid>

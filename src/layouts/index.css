@@ -20,32 +20,6 @@ hr {
 	border-top: 1px solid #bbbbbb
 }
 
-.work-description {
-	color: #797979;
-}
-
-.full-width{
-	width: 100%;
-}
-
-.cente#ff3052 {
-    text-align: center;
-}
-
-.left-line-list-item{
-	border-left: solid 1px #929292
-}
-
-.invisible-hr {
-	margin-top: 30px;
-	margin-bottom: 0px;
-	border-top: 0px;
-}
-
-.btn-primary {
-	width: 100%;
-}
-
 .circle-icon {
 	color: white;
 	width: 50px;
@@ -333,18 +307,21 @@ hr {
 	width: 100%;
 	height: 495px;
 }
+.resume__progress-bar .progress-bar {
+	background-color: #2c3e50;
+}
 
-.main-skill-bar:hover .progress-bar{
-	background-color: #5cb85c;
-	-webkit-animation: progress-bar-stripes 2s linear infinite;
+.resume__progress-bar:hover .progress-bar{
+	background-color: #ff3052;
 	animation: progress-bar-stripes 2s linear infinite;
 }
-.skill-tag{
+
+.resume__skill-tag{
 	display: inline-block;
 	color: white;
-	background-color: #5bc0de;
+	background-color: #2c3e50;
 	padding: 10px 15px;
-	margin: 3px 3px;
+	margin: 3px;
 	border-radius: 4px;
 }
 /*resume end*/
