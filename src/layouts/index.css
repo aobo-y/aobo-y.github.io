@@ -20,11 +20,6 @@ hr {
 	border-top: 1px solid #bbbbbb
 }
 
-.resume-item-name {
-	text-align: center;
-}
-
-.resume-description,
 .work-description {
 	color: #797979;
 }
@@ -145,6 +140,7 @@ hr {
 	align-items: center;
 }
 
+
 @media only screen and (max-width: 767px) {
 	.section--jumbotron {
 		margin-top: -12vh;
@@ -195,6 +191,20 @@ hr {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	color: white;
+}
+
+.section--white {
+	background: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.resume__row + .resume__row {
+	margin-top: 10px;
+}
+
+.resume__row__desc {
+	margin-top: 5px;
 }
 
 #work {
@@ -324,58 +334,6 @@ hr {
 	height: 495px;
 }
 
-/*resume begin*/
-#resume {
-	color: #2c3e50;
-
-}
-#resume-content {
-	padding-top: 80px;
-	padding-bottom: 80px;
-}
-
-#resume-catalog {
-	padding: 80px 0;
-	position: relative;
-}
-#resume-catalog ul{
-	list-style-type: none;
-}
-#resume-catalog ul>li {
-	padding-bottom: 10px;
-}
-.cl-item >a {
-	color: #2c3e50;
-	text-decoration: none;
-}
-.cl-item:hover{
-	color: #ff372d;
-	list-style-type: circle;
-}
-.cl-item:hover >a {
-	color: #ff372d;
-
-}
-.highlighted {
-	list-style-type: disc;
-	color: #ff372d;
-}
-.highlighted a {
-	color: #ff372d;
-}
-
-.absolute-top{
-	position: absolute;
-	top: 80px;
-}
-.absolute-bottom{
-	position: absolute;
-	bottom: 200px;
-}
-.fixed {
-	position: fixed;
-	top: 130px;
-}
 .main-skill-bar:hover .progress-bar{
 	background-color: #5cb85c;
 	-webkit-animation: progress-bar-stripes 2s linear infinite;
