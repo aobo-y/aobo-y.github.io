@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap'
 import Icon from '@fortawesome/react-fontawesome'
-
+import GoogleMap from 'google-map-react';
 import {
   faFacebookF,
   faTwitter,
@@ -57,6 +57,39 @@ const SOCIALS = [
     }
   }
 ]
+
+class ContactMap extends PureComponent {
+  onLoad = ({map, maps}) => {
+    const marker = new maps.Marker({
+      position: new maps.LatLng(22.303325,114.186659),
+      map: map,
+      animation: maps.Animation.DROP,
+      title: 'Spend most of time here'
+    })
+
+    maps.event.addListener(marker, 'mouseover', () => {
+      if (marker.getAnimation() == null) {
+        marker.setAnimation(maps.Animation.BOUNCE)
+        setTimeout(() => { marker.setAnimation(null) }, 3500);
+      }
+    });
+  }
+
+  render () {
+    return (
+      <GoogleMap
+        bootstrapURLKeys={{
+          key: 'AIzaSyAnE_5cOTU1CqS21QgP04N026hrA9dn1ZI',
+          language: 'en'
+        }}
+        onGoogleApiLoaded={this.onLoad}
+        yesIWantToUseGoogleMapApiInternals
+        zoom={8}
+        center={[22.303325, 114.186659]}
+      />
+    )
+  }
+}
 
 const CONTACT_DETAILS = {
   phone: {
@@ -133,7 +166,7 @@ const Contacts = () => {
 
           <Col lg={6} lgOffset={1} className='visible-lg visible-md'>
             <div className='contact__map'>
-              <div id='map-canvas' />
+              <ContactMap />
             </div>
           </Col>
         </Row>
