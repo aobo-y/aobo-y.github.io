@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import { Grid, Navbar, Nav, NavItem } from 'react-bootstrap'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-// import './carousel.css'
 import './index.css'
 
 const NavHeader = () => (

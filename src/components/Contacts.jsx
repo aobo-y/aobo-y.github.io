@@ -153,7 +153,7 @@ const Contacts = () => {
                   <div key={index} className='contact__social__row'>
                     {
                       Object.keys(chunk).map(key => (
-                        <a key={key} className='contact__social-icon' href={chunk[key].href}>
+                        <a key={key} className='contact__social-icon' href={chunk[key].href} target='_blank'>
                           <Icon fixedWidth icon={chunk[key].icon} />
                         </a>
                       ))

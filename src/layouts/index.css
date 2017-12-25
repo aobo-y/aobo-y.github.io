@@ -6,60 +6,40 @@ body {
 	font-size: 15px;
 }
 
-.page {
-	min-height: calc(100vh - 90px);
-	margin-top: 50px;
-	overflow: auto; /* for child margin collapse */
-}
-
 hr {
 	margin-top: 40px;
 	margin-bottom: 40px;
 	border-top: 1px solid #bbbbbb
 }
 
-.circle-icon {
-	color: white;
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
-	font-size: 28px;
-
-	border: 2px solid white;
-	border-radius: 50%;
-
-	text-align: center;
-	display:inline-block;
-
-	margin: 6px 5px;
+.text-primary {
+	color: #ff3052;
 }
 
-.circle-icon:hover {
-	background-color:  white;
-	border-color: white;
-	color: #2c3e50;
+.btn-primary {
+	background-color: #ff3052;
+	border-color: #ff3052;
 }
 
-.contact__social-icon {
-	color: white;
-	width: 55px;
-	height: 55px;
-	line-height: 55px;
-	font-size: 28px;
-	margin: 3px;
-
-	background-color: #444444;
-
-	text-align: center;
-	display: inline-block;
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus:active,
+.btn-primary:hover:active {
+	background-color: #cd1d3a;
+	border-color: #cd1d3a;
 }
 
-.contact__social-icon:hover {
-	color: #ffffff;
-	background-color: #2c3e50;
+textarea {
+	resize: none;
 }
 
-/*Navbar Name begin*/
+.page {
+	min-height: calc(100vh - 90px);
+	margin-top: 50px;
+	overflow: auto; /* for child margin collapse */
+}
+
 .navbar-brand-fn {
 	color: #ffffff;
 	float: left;
@@ -78,8 +58,23 @@ hr {
 .navbar-brand:hover .navbar-brand-gn {
 	color: #ffffff;
 }
-/*Navbar Name end*/
 
+.section--blue {
+	background: #2c3e50;
+	padding: 50px 0;
+	color: white;
+}
+
+.section--white {
+	background: white;
+	padding: 50px 0;
+}
+
+.section--gray {
+	background: #272727;
+	padding: 50px 0;
+	color: #bbbbbb;
+}
 
 .section--jumbotron {
 	background: url(./handle.jpg) no-repeat;
@@ -126,6 +121,28 @@ hr {
 	display: none;
 }
 
+.circle-icon {
+	color: white;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 28px;
+
+	border: 2px solid white;
+	border-radius: 50%;
+
+	text-align: center;
+	display:inline-block;
+
+	margin: 6px 5px;
+}
+
+.circle-icon:hover,
+.circle-icon:focus {
+	background-color:  white;
+	border-color: white;
+	color: #2c3e50;
+}
 
 @media only screen and (max-height: 600px) {
 	#find-more-button {
@@ -147,29 +164,30 @@ hr {
 	}
 }
 
-.section--blue {
-	background: #2c3e50;
-	padding: 50px 0;
-	color: white;
-}
-
-.section--white {
-	background: white;
-	padding: 50px 0;
-}
-
-.section--gray {
-	background: #272727;
-	padding: 50px 0;
-	color: #bbbbbb;
-}
-
 .resume__row + .resume__row {
 	margin-top: 10px;
 }
 
 .resume__row__desc {
 	margin-top: 5px;
+}
+
+.resume__progress-bar .progress-bar {
+	background-color: #2c3e50;
+}
+
+.resume__progress-bar:hover .progress-bar{
+	background-color: #ff3052;
+	animation: progress-bar-stripes 2s linear infinite;
+}
+
+.resume__skill-tag{
+	display: inline-block;
+	color: white;
+	background-color: #2c3e50;
+	padding: 8px 18px;
+	margin: 3px;
+	border-radius: 4px;
 }
 
 .work__banner {
@@ -229,42 +247,48 @@ hr {
 	height: 545px;
 }
 
-.resume__progress-bar .progress-bar {
-	background-color: #2c3e50;
-}
-
-.resume__progress-bar:hover .progress-bar{
-	background-color: #ff3052;
-	animation: progress-bar-stripes 2s linear infinite;
-}
-
-.resume__skill-tag{
-	display: inline-block;
-	color: white;
-	background-color: #2c3e50;
-	padding: 8px 18px;
-	margin: 3px;
-	border-radius: 4px;
-}
-
 .contact__form {
 	margin: 25px 0;
 }
+
 .contact__detail {
 	margin: 10px 0;
 }
+
 .contact__detail__icon {
 	vertical-align: middle;
 	margin-right: 10px;
 	font-size: 1.5em;
 	width: 1em !important; /* weird witdth for marker icon of fa */
 }
+
 .contact__social {
 	margin-top: 25px;
 	margin-left: -3px;
 }
+
 .contact__social__row {
 	display: inline-block;
+}
+
+.contact__social-icon {
+	color: white;
+	width: 55px;
+	height: 55px;
+	line-height: 55px;
+	font-size: 28px;
+	margin: 3px;
+
+	background-color: #444444;
+
+	text-align: center;
+	display: inline-block;
+}
+
+.contact__social-icon:hover,
+.contact__social-icon:focus	{
+	background-color: #ffffff;
+	color: #2c3e50;
 }
 
 .footer {
@@ -272,26 +296,4 @@ hr {
 	padding: 10px 0;
 	text-align: right;
 	color: white;
-}
-
-.text-primary {
-	color: #ff3052;
-}
-
-.btn-primary {
-	background-color: #ff3052;
-	border-color: #ff3052;
-}
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:focus:active,
-.btn-primary:hover:active {
-	background-color: #cd1d3a;
-	border-color: #cd1d3a;
-}
-
-textarea {
-	resize: none;
 }
