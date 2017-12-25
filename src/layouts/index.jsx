@@ -41,7 +41,9 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <NavHeader />
-    {children()}
+    <div className='page'>
+      {children()}
+    </div>
     <div id='footer'>
       <div className='container'>
         A Web Site by <b>Aobo Yang</b>

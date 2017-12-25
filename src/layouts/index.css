@@ -6,6 +6,11 @@ body {
 	font-size: 15px;
 }
 
+.page {
+	min-height: calc(100vh - 90px);
+	margin-top: 50px;
+	overflow: auto; /* for child margin collapse */
+}
 
 hr {
 	margin-top: 40px;
@@ -81,7 +86,7 @@ hr {
 	background-position: center center;
 	width: 100%;
 	background-size: cover;
-	margin-top: -4vh;
+	margin-top: calc(-4vh - 50px);
 	margin-bottom: 0;
 	height: 86vh;
 	min-height: 450px;
