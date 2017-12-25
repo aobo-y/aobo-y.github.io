@@ -267,18 +267,12 @@ hr {
 	display: inline-block;
 }
 
-#footer {
+.footer {
 	background-color: black;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 0;
 	text-align: right;
 	color: white;
 }
-
-#footer b {
-	color: #ff3052;
-}
-
 
 .text-primary {
 	color: #ff3052;

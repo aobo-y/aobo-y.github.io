@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Grid, Navbar, Nav, NavItem } from 'react-bootstrap'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 // import './carousel.css'
@@ -44,10 +44,10 @@ const TemplateWrapper = ({ children }) => (
     <div className='page'>
       {children()}
     </div>
-    <div id='footer'>
-      <div className='container'>
-        A Web Site by <b>Aobo Yang</b>
-      </div>
+    <div className='footer'>
+      <Grid>
+        A Web Site by <b className='text-primary'>Aobo Yang</b>
+      </Grid>
     </div>
   </div>
 )
