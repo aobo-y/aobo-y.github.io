@@ -46,8 +46,7 @@ const SOCIALS = {
     icon: faInstagram
   }
 }
-console.log(9999)
-console.log(Icon)
+
 const Hero = () => {
   return (
     <Jumbotron className='section--jumbotron'>

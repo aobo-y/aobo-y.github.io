@@ -1,55 +1,78 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Grid, Navbar, Nav, NavItem } from 'react-bootstrap'
+import {capitalize} from 'lodash'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 
-const NavHeader = () => (
-  <Navbar inverse fixedTop collapseOnSelect role='navigation'>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <a href='#header'>
-          <span className='navbar-brand-gn'>Aobo</span>
-          &nbsp;
-          <span className='navbar-brand-fn'>Yang</span>
-        </a>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
+const NavItems = [
+  'about',
+  'resume',
+  'work',
+  'contact'
+]
 
-    <Navbar.Collapse>
-      <Nav pullRight>
-        <NavItem eventKey='1' href='#me'>About</NavItem>
-        <NavItem eventKey='2' href='#resume'>Resume</NavItem>
-        <NavItem eventKey='3' href='#work'>Work</NavItem>
-        <NavItem eventKey='4' href='#contact'>Contact</NavItem>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-)
+class NavHeader extends PureComponent {
+  static propTypes = {
+    history: PropTypes.object
+  }
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title='Aobo Yang'
-      meta={[
-        { name: 'description', content: 'Personal site of Aobo Yang' },
-        { name: 'keywords', content: 'aobo, yang aobo' }
-      ]}
-    />
-    <NavHeader />
-    <div className='page'>
-      {children()}
+  onSelect = key => {
+    this.props.history.push(`/#${key}`)
+  }
+
+  render () {
+    return (
+      <Navbar inverse fixedTop collapseOnSelect role='navigation'>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href='#header'>
+              <span className='navbar-brand-gn'>Aobo</span>
+              &nbsp;
+              <span className='navbar-brand-fn'>Yang</span>
+            </a>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+
+        <Navbar.Collapse>
+          <Nav pullRight>
+            {
+              NavItems.map((i, index) =>
+                <NavItem key={index} onSelect={this.onSelect} eventKey={i} href={`/#${i}`}>{capitalize(i)}</NavItem>
+              )
+            }
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    )
+  }
+}
+
+const TemplateWrapper = props => {
+  return (
+    <div>
+      <Helmet
+        title='Aobo Yang'
+        meta={[
+          { name: 'description', content: 'Personal site of Aobo Yang' },
+          { name: 'keywords', content: 'aobo, yang aobo' }
+        ]}
+      />
+      <NavHeader history={props.history} />
+      <div className='page'>
+        {props.children()}
+      </div>
+      <div className='footer'>
+        <Grid>
+          A Web Site by <b className='text-primary'>Aobo Yang</b>
+        </Grid>
+      </div>
     </div>
-    <div className='footer'>
-      <Grid>
-        A Web Site by <b className='text-primary'>Aobo Yang</b>
-      </Grid>
-    </div>
-  </div>
-)
+  )
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func
