@@ -24,7 +24,7 @@ const WORKS = [
 
 const Portfolio = () => {
   return (
-    <section>
+    <section id='section-work'>
       <div className='work__banner'>
         <h3 className='work__banner__title'>Work Portfolio</h3>
       </div>

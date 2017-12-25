@@ -106,9 +106,9 @@ const CONTACT_DETAILS = {
   }
 }
 
-const Contacts = () => {
+const Contact = () => {
   return (
-    <section className='section--gray'>
+    <section id='section-contact' className='section--gray'>
       <Grid>
         <Row>
           <Col lg={5}>
@@ -175,4 +175,4 @@ const Contacts = () => {
   )
 }
 
-export default Contacts
+export default Contact

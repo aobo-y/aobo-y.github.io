@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Grid, Navbar, Nav, NavItem } from 'react-bootstrap'
 import {capitalize} from 'lodash'
+import scrollTo from '../utils/scrollTo'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
@@ -19,8 +20,16 @@ class NavHeader extends PureComponent {
     history: PropTypes.object
   }
 
+  onBrandClick = e => {
+    this.props.history.push('/')
+    scrollTo()
+    e.preventDefault();
+  }
+
   onSelect = key => {
     this.props.history.push(`/#${key}`)
+    // temp handle the scroll here because gatsby's issue in location hash update
+    scrollTo(key)
   }
 
   render () {
@@ -28,7 +37,7 @@ class NavHeader extends PureComponent {
       <Navbar inverse fixedTop collapseOnSelect role='navigation'>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href='#header'>
+            <a href='/' onClick={this.onBrandClick}>
               <span className='navbar-brand-gn'>Aobo</span>
               &nbsp;
               <span className='navbar-brand-fn'>Yang</span>

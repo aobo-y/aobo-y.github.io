@@ -99,7 +99,7 @@ ResumeRow.propTypes = {
 
 const Resume = () => {
   return (
-    <section className='section--white'>
+    <section id='section-resume' className='section--white'>
       <Grid>
         <ResumeRow
           label='EDUCATION'
