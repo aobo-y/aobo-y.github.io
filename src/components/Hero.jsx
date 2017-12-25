@@ -46,7 +46,8 @@ const SOCIALS = {
     icon: faInstagram
   }
 }
-
+console.log(9999)
+console.log(Icon)
 const Hero = () => {
   return (
     <Jumbotron className='section--jumbotron'>
@@ -55,7 +56,7 @@ const Hero = () => {
       <div className='hidden-xs'>
         {Object.keys(SOCIALS).map(key => (
           <a key={key} className='circle-icon' href={SOCIALS[key].href} target='_blank'>
-            <Icon icon={SOCIALS[key].icon} />
+            {Object.keys(Icon).length !== 0 && <Icon icon={SOCIALS[key].icon} />}
           </a>
         ))}
       </div>

@@ -113,7 +113,7 @@ const Contacts = () => {
         <Row>
           <Col lg={5}>
             <h3 className='text-primary'>
-              <Icon icon={faComment} /> Say Hello
+              {Object.keys(Icon).length !== 0 && <Icon icon={faComment} />} Say Hello
             </h3>
             <form role='form' className='contact__form'>
               <Row>
@@ -142,7 +142,7 @@ const Contacts = () => {
             {
               Object.keys(CONTACT_DETAILS).map(key => (
                 <div key={key} className='contact__detail'>
-                  <Icon icon={CONTACT_DETAILS[key].icon} className='contact__detail__icon text-primary' /> {CONTACT_DETAILS[key].value}
+                  {Object.keys(Icon).length !== 0 && <Icon icon={CONTACT_DETAILS[key].icon} className='contact__detail__icon text-primary' />} {CONTACT_DETAILS[key].value}
                 </div>
               ))
             }
@@ -154,7 +154,7 @@ const Contacts = () => {
                     {
                       Object.keys(chunk).map(key => (
                         <a key={key} className='contact__social-icon' href={chunk[key].href} target='_blank'>
-                          <Icon fixedWidth icon={chunk[key].icon} />
+                          {Object.keys(Icon).length !== 0 && <Icon fixedWidth icon={chunk[key].icon} />}
                         </a>
                       ))
                     }
