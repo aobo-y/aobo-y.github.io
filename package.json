@@ -7,7 +7,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && cp ./README.md ./public && gh-pages -d public -b master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
