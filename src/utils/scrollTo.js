@@ -27,7 +27,8 @@ function smoothScroll (offset) {
     if (
       (target === offset) ||
       (step > 0 && target > offset) ||
-      (step < 0 && target < offset)
+      (step < 0 && target < offset) ||
+      (target + window.innerHeight >= document.body.scrollHeight)
     ) {
       window.scrollTo(0, offset)
       clearInterval(appScrollInterval)
