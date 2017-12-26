@@ -8,6 +8,7 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "deploy": "gatsby build && cp ./README.md ./public && gh-pages -d public -b master",
+    "lint": "eslint --ext .jsx,.js .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,12 +39,14 @@
     "react-bootstrap": "^0.31.5"
   },
   "devDependencies": {
-    "eslint": "^4.13.1",
+    "babel-eslint": "7",
+    "eslint": "3.x",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^1.1.0"
   }

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types'
 import Hero from '../components/Hero'
 import Me from '../components/Me'
 import Resume from '../components/Resume'

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { Grid, Row, Col, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap'
 import Icon from '@fortawesome/react-fontawesome'
-import GoogleMap from 'google-map-react';
+import GoogleMap from 'google-map-react'
 import {
   faFacebookF,
   faTwitter,
@@ -61,7 +61,7 @@ const SOCIALS = [
 class ContactMap extends PureComponent {
   onLoad = ({map, maps}) => {
     const marker = new maps.Marker({
-      position: new maps.LatLng(22.303325,114.186659),
+      position: new maps.LatLng(22.303325, 114.186659),
       map: map,
       animation: maps.Animation.DROP,
       title: 'Spend most of time here'
@@ -70,9 +70,9 @@ class ContactMap extends PureComponent {
     maps.event.addListener(marker, 'mouseover', () => {
       if (marker.getAnimation() == null) {
         marker.setAnimation(maps.Animation.BOUNCE)
-        setTimeout(() => { marker.setAnimation(null) }, 3500);
+        setTimeout(() => { marker.setAnimation(null) }, 3500)
       }
-    });
+    })
   }
 
   render () {

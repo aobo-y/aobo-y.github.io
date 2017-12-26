@@ -23,7 +23,7 @@ class NavHeader extends PureComponent {
   onBrandClick = e => {
     this.props.history.push('/')
     scrollTo()
-    e.preventDefault();
+    e.preventDefault()
   }
 
   onSelect = key => {
@@ -87,7 +87,8 @@ const TemplateWrapper = props => {
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func,
+  history: PropTypes.object
 }
 
 export default TemplateWrapper
