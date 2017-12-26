@@ -69,6 +69,9 @@ const TemplateWrapper = props => {
           { name: 'description', content: 'Personal site of Aobo Yang' },
           { name: 'keywords', content: 'aobo, yang aobo' }
         ]}
+        link={[
+          { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' }
+        ]}
       />
       <NavHeader history={props.history} />
       <div className='page'>
