@@ -117,6 +117,11 @@ textarea {
 	}
 }
 
+.section__me__header {
+	margin: 0 0 10px;
+	font-size: 15px;
+}
+
 #find-more-button {
 	display: none;
 }
@@ -165,11 +170,27 @@ textarea {
 }
 
 .resume__row + .resume__row {
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
-.resume__row__desc {
-	margin-top: 5px;
+.section__resume__header {
+	margin: 0 0 10px;
+	font-size: 15px;
+}
+
+.resume__title {
+	margin-bottom: 10px;
+}
+
+.resume__date {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+	.resume__date {
+		text-align: left;
+	}
 }
 
 .resume__progress-bar .progress-bar {

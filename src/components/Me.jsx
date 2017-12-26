@@ -7,7 +7,7 @@ const Me = () => {
       <Grid>
         <Row>
           <Col md={2} mdOffset={1} className='text-center'>
-            ME
+            <h3 className='section__me__header'>ME</h3>
           </Col>
           <Col md={6}>
             <p>

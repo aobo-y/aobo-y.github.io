@@ -67,19 +67,19 @@ const ResumeRow = ({ label, title, org, date, desc }) => {
   return (
     <Row className='resume__row'>
       <Col md={3} className='text-center'>
-        {label}
+        {label && <h4 className='section__resume__header'>{label}</h4>}
       </Col>
-      <Col md={6}>
+      <Col md={6} className='resume__title'>
         {title}
         <br />
         <i>{org}</i>
       </Col>
-      <Col md={3} className='text-center'>
+      <Col md={3} className='resume__date'>
         {date}
       </Col>
       {
         desc &&
-          <Col md={6} mdOffset={3} className='resume__row__desc'>
+          <Col md={6} mdOffset={3}>
             <p className='text-muted'>
               {desc}
             </p>
@@ -137,7 +137,7 @@ const Resume = () => {
         <hr />
         <Row>
           <Col md={3} className='text-center'>
-            SKILL
+            <h4 className='section__resume__header'>SKILL</h4>
           </Col>
           <Col md={7}>
             {MAIN_SKILLS.map((skill, index) => (
