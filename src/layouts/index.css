@@ -103,7 +103,7 @@ textarea {
 
 @media only screen and (max-width: 767px) {
 	.section--jumbotron {
-		margin-top: -12vh;
+		margin-top: calc(-12vh - 50px);
 		height: 112vh;
 		padding-top: 54vh;
 	}
@@ -117,13 +117,30 @@ textarea {
 	}
 }
 
+.jumbotron__findmore {
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #555555;
+	opacity: 0.55;
+}
+
+.jumbotron__findmore:active,
+.jumbotron__findmore:hover,
+.jumbotron__findmore:focus {
+	opacity: 0.8;
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .section__me__header {
 	margin: 0 0 10px;
 	font-size: 15px;
-}
-
-#find-more-button {
-	display: none;
 }
 
 .circle-icon {
@@ -147,26 +164,6 @@ textarea {
 	background-color:  white;
 	border-color: white;
 	color: #2c3e50;
-}
-
-@media only screen and (max-height: 600px) {
-	#find-more-button {
-		display: block;
-		width: 100%;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		position: absolute;
-	    bottom: 0;
-		text-align: center;
-		text-decoration: none;
-		color: #ffffff;
-		background-color: #555555;
-		opacity: 0.55;
-	}
-
-	#find-more-button:active{
-		opacity: 0.8
-	}
 }
 
 .resume__row + .resume__row {

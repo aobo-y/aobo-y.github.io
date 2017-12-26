@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { Jumbotron } from 'react-bootstrap'
 import Icon from '@fortawesome/react-fontawesome'
 import {
@@ -11,6 +11,7 @@ import {
   faWeibo,
   faInstagram
 } from '@fortawesome/fontawesome-free-brands'
+import scrollTo from '../utils/scrollTo'
 
 const SOCIALS = {
   facebook: {
@@ -47,21 +48,30 @@ const SOCIALS = {
   }
 }
 
-const Hero = () => {
-  return (
-    <Jumbotron className='section--jumbotron'>
-      <h1 className='jumbotron__h1'>Aobo Yang</h1>
-      <h2>Software Engineer</h2>
-      <div className='hidden-xs'>
-        {Object.keys(SOCIALS).map(key => (
-          <a key={key} className='circle-icon' href={SOCIALS[key].href} target='_blank'>
-            {Object.keys(Icon).length !== 0 && <Icon icon={SOCIALS[key].icon} />}
-          </a>
-        ))}
-      </div>
-      <a id='find-more-button' href='#me'>Find out more</a>
-    </Jumbotron>
-  )
+class Hero extends PureComponent {
+  onFindMore = e => {
+    // temp handle the scroll here because gatsby's issue in location hash update
+    scrollTo('about')
+  }
+
+  render () {
+    return (
+      <Jumbotron className='section--jumbotron'>
+        <h1 className='jumbotron__h1'>Aobo Yang</h1>
+        <h2>Software Engineer</h2>
+        <div className='hidden-xs'>
+          {Object.keys(SOCIALS).map(key => (
+            <a key={key} className='circle-icon' href={SOCIALS[key].href} target='_blank'>
+              {Object.keys(Icon).length !== 0 && <Icon icon={SOCIALS[key].icon} />}
+            </a>
+          ))}
+        </div>
+        <a className='jumbotron__findmore visible-xs-block' href='/#me' onClick={this.onFindMore}>
+          Find out more
+        </a>
+      </Jumbotron>
+    )
+  }
 }
 
 export default Hero
