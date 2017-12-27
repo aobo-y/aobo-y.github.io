@@ -103,8 +103,8 @@ textarea {
 
 @media only screen and (max-width: 767px) {
 	.section--jumbotron {
-		margin-top: calc(-12vh - 50px);
-		height: 112vh;
+		margin-top: calc(-15vh - 50px);
+		height: 115vh;
 		padding-top: 54vh;
 	}
 

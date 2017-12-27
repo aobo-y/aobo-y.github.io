@@ -66,7 +66,7 @@ class Hero extends PureComponent {
             </a>
           ))}
         </div>
-        <a className='jumbotron__findmore visible-xs-block' href='/#me' onClick={this.onFindMore}>
+        <a className='jumbotron__findmore visible-xs-block' href='/#about' onClick={this.onFindMore}>
           Find out more
         </a>
       </Jumbotron>
