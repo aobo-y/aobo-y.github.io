@@ -27,6 +27,7 @@ class NavHeader extends PureComponent {
   }
 
   onSelect = key => {
+    this.props.history.push(`/#${key}`)
     // temp handle the scroll here because gatsby's issue in location hash update
     scrollTo(key)
   }
