@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Row, Col, Image } from 'react-bootstrap'
-import psImage from './images/ps-2.png'
-import ccImage from './images/campuscontacts.png'
+import psImage from './images/ps.png'
+import ccImage from './images/cc.png'
 import tssImage from './images/tss.png'
 
 const WORKS = [
