@@ -73,7 +73,15 @@ const TemplateWrapper = props => {
           { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' },
           { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway' }
         ]}
-      />
+      >
+        <script async src='https://www.googletagmanager.com/gtag/js?id=UA-111675562-1' />
+        <script>{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-111675562-1');
+        `}</script>
+      </Helmet>
       <NavHeader history={props.history} />
       <div className='page'>
         {props.children()}
