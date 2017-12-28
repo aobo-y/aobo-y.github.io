@@ -54,13 +54,13 @@ const SKILLS = [
   'C',
   'Express',
   'Koa',
+  'D3',
   'AngularJS',
   'Electron',
   'Cordova',
   'Docker',
   'Socket.io',
-  'MongoDB',
-  'D3'
+  'MongoDB'
 ]
 
 const ResumeRow = ({ label, title, org, date, desc }) => {

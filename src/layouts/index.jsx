@@ -70,7 +70,8 @@ const TemplateWrapper = props => {
           { name: 'keywords', content: 'aobo, yang aobo' }
         ]}
         link={[
-          { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' }
+          { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' },
+          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway' }
         ]}
       />
       <NavHeader history={props.history} />
