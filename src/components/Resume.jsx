@@ -4,10 +4,10 @@ import { Grid, Row, Col, ProgressBar } from 'react-bootstrap'
 
 const EXPERIENCES = [
   {
-    position: 'Software Engineer',
+    position: 'Engineering Lead',
     organization: 'Aftership Ltd',
     location: 'Hong Kong',
-    duration: 'Jul 2015 - Now',
+    duration: 'Jul 2015 - Jul 2018',
     desc: 'Lead the web development'
   },
   {
@@ -103,6 +103,11 @@ const Resume = () => {
       <Grid>
         <ResumeRow
           label='EDUCATION'
+          title='Master in Computer Science'
+          org='University of Virginia'
+          date='Aug 2018 - Now'
+        />
+        <ResumeRow
           title='Bachelor of Science in Computing Studies'
           org='Hong Kong Baptist University'
           date={
