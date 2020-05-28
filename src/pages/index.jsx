@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Hero from '../components/Hero'
 import Me from '../components/Me'
 import Resume from '../components/Resume'
-import Portfolio from '../components/Portfolio'
+// import Portfolio from '../components/Portfolio'
 import Contact from '../components/Contact'
 import scrollTo from '../utils/scrollTo'
 
@@ -28,7 +28,7 @@ class IndexPage extends PureComponent {
         <Hero />
         <Me />
         <Resume />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Contact />
       </div>
     )

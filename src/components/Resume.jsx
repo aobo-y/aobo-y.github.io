@@ -4,6 +4,13 @@ import { Grid, Row, Col, ProgressBar } from 'react-bootstrap'
 
 const EXPERIENCES = [
   {
+    position: 'Research Assistant',
+    organization: 'University of Virginia',
+    location: 'US',
+    duration: 'Feb 2019 - Now',
+    desc: 'My research focuses on explainable recommendations'
+  },
+  {
     position: 'Engineering Lead',
     organization: 'Aftership Ltd',
     location: 'Hong Kong',
@@ -41,23 +48,24 @@ const EXPERIENCES = [
 ]
 
 const MAIN_SKILLS = [
+  {name: 'Python', progress: 80},
   {name: 'Javascript', progress: 80},
-  {name: 'Python', progress: 50},
   {name: 'Photoshop', progress: 65}
 ]
 
 const SKILLS = [
+  'PyTorch',
   'Node.js',
   'React',
   'Redux',
   'Java',
+  'Go',
   'C',
   'Express',
   'Koa',
   'D3',
-  'AngularJS',
   'Electron',
-  'Cordova',
+  'AngularJS',
   'Docker',
   'Socket.io',
   'MongoDB'
@@ -103,9 +111,9 @@ const Resume = () => {
       <Grid>
         <ResumeRow
           label='EDUCATION'
-          title='Master in Computer Science'
+          title='Master of Science in Computer Science'
           org='University of Virginia'
-          date='Aug 2018 - Now'
+          date='Aug 2018 - May 2020'
         />
         <ResumeRow
           title='Bachelor of Science in Computing Studies'
@@ -137,7 +145,7 @@ const Resume = () => {
           title='Silver Award'
           org='HKEIA Innovation & Technology Project Competition'
           date='Nov 2012'
-          desc='Held by Hong Kong Electronic Industries Association and aims to recognize and reward bachelor or higher diploma graduates of electronic engineering or related engineering fields with outstanding projects demonstrating excellence in technology and innovation'
+          desc=''
         />
         <hr />
         <Row>
