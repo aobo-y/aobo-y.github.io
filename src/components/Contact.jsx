@@ -30,7 +30,7 @@ const SOCIALS = [
       icon: faTwitter
     },
     github: {
-      href: 'https://github.com/yangaobo',
+      href: 'https://github.com/aobo-y',
       icon: faGithub
     },
     linkedin: {
